@@ -12,7 +12,7 @@ class EventAdmin(admin.ModelAdmin):
 
 class CollectionsAdmin(admin.ModelAdmin):
     model = CollectionsModel
-    list_display = ["event"]
+    list_display = ["name"]
 
 
 class CategoryAdmin(admin.ModelAdmin):
