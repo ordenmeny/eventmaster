@@ -1,17 +1,26 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import CustomUser
-# from .forms import CustomUserCreationForm
+from .models import *
 
 class CustomUserAdmin(UserAdmin):
-    # add_form = CustomUserCreationForm
     model = CustomUser
     list_display = ["username", "email", "age", "is_staff"]
-    # fieldsets = UserAdmin.fieldsets + (
-    #     (None, {"fields": ("age",)}),
-    # )
-    # add_fieldsets = UserAdmin.add_fieldsets + (
-    #     (None, {"fields": ("age",)}),
-    # )
+
+class EventAdmin(admin.ModelAdmin):
+    model = EventModel
+    list_display = ["name"]
+
+class CollectionsAdmin(admin.ModelAdmin):
+    model = CollectionsModel
+    list_display = ["event"]
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    model = CategoryModel
+    list_display = ["name"]
+
 
 admin.site.register(CustomUser, CustomUserAdmin)
+admin.site.register(EventModel, EventAdmin)
+admin.site.register(CollectionsModel, CollectionsAdmin)
+admin.site.register(CategoryModel, CategoryAdmin)
