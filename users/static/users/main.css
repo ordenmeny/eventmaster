@@ -1,0 +1,79 @@
+.podborki-title{
+    font-size: 42px;
+}
+
+.title-block{
+    font-size: 42px;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+.card-img{
+    height: 240px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-big-in-col{
+    height: 304px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-border-none{
+    border: none !important;
+}
+
+.cat-image{
+    width: 133px;
+    height: 133px;
+    /* margin: 200px !important; */
+}
+
+
+@media (max-width: 773px) {
+    .event-img{
+        height: 493px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .event-title{
+        font-size: 42px;
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 774px) and (max-width: 993px) {
+    .event-img{
+        height: 493px;
+        width: 716px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .event-title{
+        font-size: 42px;
+        width: 707px;
+    }
+}
+
+@media (min-width: 994px) {
+    .event-img{
+        height: 493px;
+        width: 916px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .event-title{
+        font-size: 42px;
+        width: 907px;
+    }
+}
