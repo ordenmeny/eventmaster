@@ -14,6 +14,7 @@ class EventModel(models.Model):
     image = models.ImageField(upload_to='event_images/', null=True, blank=True)
     date = models.DateTimeField(null=True, blank=True)
     address = models.CharField(null=True, blank=True)
+    desc = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.name

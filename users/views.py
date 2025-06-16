@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
 from .models import *
 
 class HomePageView(TemplateView):
@@ -16,3 +16,10 @@ class HomePageView(TemplateView):
         context["soon_events"] = EventModel.objects.all() # Сделать фильтрацию по дате
         context["cats"] = CategoryModel.objects.all()
         return context
+
+
+class DetailEventView(DetailView):
+    model = EventModel
+    template_name = 'users/event_detail.html'
+    context_object_name = 'event'
+

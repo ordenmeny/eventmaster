@@ -1,0 +1,33 @@
+{% extends "users/base/base.html" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<br><br>
+<div class="container">
+        <img src="{{ event.image.url }}" class="event-img rounded">
+        <br><br>
+        <p class="event-title">
+            {{event.name}}
+        </p>
+
+        <p>
+            {{ event.date }} {{ event.address }}
+        </p>
+        <p>
+
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur magni, voluptates repudiandae accusamus facere in consequuntur quae, cupiditate fuga labore hic. Corrupti asperiores deleniti inventore. Perferendis exercitationem maiores consequuntur excepturi?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur magni, voluptates repudiandae accusamus facere in consequuntur quae, cupiditate fuga labore hic. Corrupti asperiores deleniti inventore. Perferendis exercitationem maiores consequuntur excepturi?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur magni, voluptates repudiandae accusamus facere in consequuntur quae, cupiditate fuga labore hic. Corrupti asperiores deleniti inventore. Perferendis exercitationem maiores consequuntur excepturi?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur magni, voluptates repudiandae accusamus facere in consequuntur quae, cupiditate fuga labore hic. Corrupti asperiores deleniti inventore. Perferendis exercitationem maiores consequuntur excepturi?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur magni, voluptates repudiandae accusamus facere in consequuntur quae, cupiditate fuga labore hic. Corrupti asperiores deleniti inventore. Perferendis exercitationem maiores consequuntur excepturi?
+
+        </p>
+
+        <button class="btn btn-secondary">Зарегистрироваться</button>
+    </div>
+
+{% endblock %}
