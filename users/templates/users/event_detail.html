@@ -1,6 +1,6 @@
 {% extends "users/base/base.html" %}
 
-{% block title %}{{title}}{% endblock %}
+{% block title %}{{event.name}}{% endblock %}
 
 {% block content %}
 <br><br>
@@ -10,7 +10,9 @@
         <p class="event-title">
             {{event.name}}
         </p>
-
+        <p>
+            {{event.category}}
+        </p>
         <p>
             {{ event.date }} {{ event.address }}
         </p>
@@ -19,15 +21,11 @@
         </p>
 
         <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur magni, voluptates repudiandae accusamus facere in consequuntur quae, cupiditate fuga labore hic. Corrupti asperiores deleniti inventore. Perferendis exercitationem maiores consequuntur excepturi?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur magni, voluptates repudiandae accusamus facere in consequuntur quae, cupiditate fuga labore hic. Corrupti asperiores deleniti inventore. Perferendis exercitationem maiores consequuntur excepturi?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur magni, voluptates repudiandae accusamus facere in consequuntur quae, cupiditate fuga labore hic. Corrupti asperiores deleniti inventore. Perferendis exercitationem maiores consequuntur excepturi?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur magni, voluptates repudiandae accusamus facere in consequuntur quae, cupiditate fuga labore hic. Corrupti asperiores deleniti inventore. Perferendis exercitationem maiores consequuntur excepturi?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur magni, voluptates repudiandae accusamus facere in consequuntur quae, cupiditate fuga labore hic. Corrupti asperiores deleniti inventore. Perferendis exercitationem maiores consequuntur excepturi?
-
+            {{ event.desc }}
         </p>
 
         <button class="btn btn-secondary">Зарегистрироваться</button>
+        <br><br>
     </div>
 
 {% endblock %}

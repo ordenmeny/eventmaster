@@ -1,0 +1,18 @@
+{% extends "users/base/base.html" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+{% for collection in collections %}
+<br><br>
+<div class="container">
+    <div class="image-wrapper">
+        <a href="#"><img src="{{ collection.image.url }}" alt="Image"></a>
+    </div>
+  <h3>{{ collection.name }}</h3>
+</div>
+
+{% endfor %}
+
+{% endblock %}
