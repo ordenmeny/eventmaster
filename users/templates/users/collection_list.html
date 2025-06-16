@@ -8,9 +8,11 @@
 <br><br>
 <div class="container">
     <div class="image-wrapper">
-        <a href="#"><img src="{{ collection.image.url }}" alt="Image"></a>
+        <a href="{{ collection.get_absolute_url }}"><img src="{{ collection.image.url }}" alt="Image"></a>
     </div>
-  <h3>{{ collection.name }}</h3>
+  <a href="{{ collection.get_absolute_url }}">
+    <h3>{{ collection.name }}</h3>
+  </a>
 </div>
 
 {% endfor %}

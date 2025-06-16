@@ -1,5 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.urls import reverse
+
 
 class CustomUser(AbstractUser):
     age = models.IntegerField(null=True, blank=True)
@@ -19,6 +21,9 @@ class EventModel(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('users:event_detail', kwargs={'pk': self.pk})
+
 
 class CollectionsModel(models.Model):
     name = models.CharField(max_length=512, null=True, blank=True)
@@ -27,6 +32,9 @@ class CollectionsModel(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+    def get_absolute_url(self):
+        return reverse('users:collection_detail', kwargs={'pk': self.pk})
 
 class CategoryModel(models.Model):
     name = models.CharField(max_length=512)

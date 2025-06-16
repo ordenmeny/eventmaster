@@ -49,3 +49,11 @@ class ListCollectionsView(ListView):
     model = CollectionsModel
     template_name = 'users/collection_list.html'
     context_object_name = 'collections'
+
+class ListCategoriesView(TemplateView):
+    template_name = 'users/cats_list.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["cats"] = CategoryModel.objects.all()
+        return context

@@ -7,11 +7,15 @@
                 <div class="card mb-3 card-border-none">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="{{ cat.image.url }}" class="img-fluid rounded cat-image" alt="...">
+                        <a href="{% url 'users:category_detail' cat.pk %}">
+                            <img src="{{ cat.image.url }}" class="img-fluid rounded cat-image" alt="...">
+                        </a>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">{{ cat.name }}</h5>
+                            <a href="{% url 'users:category_detail' cat.pk %}">
+                                <h5 class="card-title">{{cat.name}}</h5>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -27,11 +31,15 @@
             <div class="card mb-3 card-border-none">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="{{ cat.image.url }}" class="img-fluid rounded cat-image" alt="...">
+                        <a href="{% url 'users:category_detail' cat.pk %}">
+                            <img src="{{ cat.image.url }}" class="img-fluid rounded cat-image" alt="...">
+                        </a>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
+                        <a href="{% url 'users:category_detail' cat.pk %}">
                             <h5 class="card-title">{{cat.name}}</h5>
+                        </a>
                         </div>
                     </div>
                 </div>

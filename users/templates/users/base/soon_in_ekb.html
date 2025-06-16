@@ -11,11 +11,13 @@
 
                   <div class="col-12 col-lg-6 col-md-6">
                     <div class="card card-border-none">
-                      <img src="{{ event.image.url }}" class="card-img-top card-img" alt="...">
+                        <a href="{% url 'users:event_detail' event.pk %}">
+                            <img src="{{ event.image.url }}" class="card-img-top card-img" alt="...">
+                        </a>
                       <div class="card-body">
-                        <h5 class="card-title">{{ event.name }}</h5>
-                        <p class="card-text">{{ event.category }}</p>
-                        <p class="card-text">{{ event.date }} {{ event.address }}</p>
+                        <a href="{% url 'users:event_detail' event.pk %}"><h5 class="card-title">{{ event.name }}</h5></a>
+                        <a href="{% url 'users:event_detail' event.pk %}"><p class="card-text">{{ event.category }}</p></a>
+                        <a href="{% url 'users:event_detail' event.pk %}"><p class="card-text">{{ event.date }} {{ event.address }}</p></a>
                       </div>
                     </div>
                   </div>

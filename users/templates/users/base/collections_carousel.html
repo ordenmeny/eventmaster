@@ -6,14 +6,14 @@
             {% for collection in collections %}
             {% if not forloop.first %}
             <div class="carousel-item">
-                <a href="#">
+                <a href="{% url 'users:collection_detail' collection.pk %}">
                     <img src="{{ collection.image.url }}" class="d-block w-100" alt="{{ collection.name }}">
                 </a>
             </div>
 
             {% else %}
             <div class="carousel-item active">
-                <a href="#">
+                <a href="{% url 'users:collection_detail' collection.pk %}">
                     <img src="{{ collection.image.url }}" class="d-block w-100" alt="{{ collection.name }}">
                 </a>
             </div>
