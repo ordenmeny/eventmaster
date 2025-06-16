@@ -5,6 +5,8 @@ from django.urls import reverse
 
 class CustomUser(AbstractUser):
     age = models.IntegerField(null=True, blank=True)
+    image = models.ImageField(upload_to='users_images/', null=True, blank=True)
+    events = models.ManyToManyField('EventModel', blank=True)
 
     def __str__(self):
         return self.username

@@ -24,7 +24,7 @@
             {{ event.desc }}
         </p>
 
-        <button class="btn btn-secondary">Зарегистрироваться</button>
+        <a href="{% url 'users:registr_event' pk=event.pk %}" class="btn btn-secondary">Зарегистрироваться</a>
         <br><br>
     </div>
 
