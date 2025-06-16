@@ -1,0 +1,85 @@
+{% extends "users/base/base.html" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1 style="display: inline-block; margin-right: 48px;">Регистрация</h1>
+
+    <br><br>
+    <div style="border: 1px solid #f1f1f1; background-color: #f1f1f1; border-radius: 32px; padding: 24px;">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div style="display: flex; gap: 40px;">
+                <div style="flex: 1;">
+                    <div class="mb-3" style="margin-bottom: 24px !important;">
+                        <label class="form-label"
+                               style="margin-left: 15px; font-size: 18px;">Имя</label>
+                        {{form.first_name}}
+                    </div>
+                    <div class="mb-3" style="margin-bottom: 24px !important;">
+                        <label for="lastnameInput" class="form-label"
+                               style="margin-left: 15px; font-size: 18px;">Фамилия</label>
+                        {{form.last_name}}
+                    </div>
+                    <div class="mb-3" style="margin-bottom: 24px !important;">
+                        <label for="dateofbirthInput" class="form-label"
+                               style="margin-left: 15px; font-size: 18px;">Дата рождения</label>
+                        <input type="date" class="form-control" id="dateofbirthInput"
+                               placeholder="Введите дату рождения"
+                               style="border-radius: 24px; height: 48px; font-size: 18px; border: 1px solid black">
+                    </div>
+                    <div class="mb-3" style="margin-bottom: 24px !important;">
+                        <label for="emailInput" class="form-label"
+                               style="margin-left: 15px; font-size: 18px;">Email</label>
+                        {{form.email}}
+                    </div>
+                    <div class="mb-3" style="margin-bottom: 24px !important;">
+                        <label for="emailInput" class="form-label"
+                               style="margin-left: 15px; font-size: 18px;">Логин</label>
+                        {{form.username}}
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label" style="font-size: 18px; margin-left: 15px;">Вставьте
+                            аватарку</label>
+                        {{form.image}}
+                    </div>
+                </div>
+
+
+                <div style="flex: 1">
+                    <div class="mb-3" style="margin-bottom: 24px !important;">
+                        <label for="pswInput" class="form-label"
+                               style="margin-left: 15px; font-size: 18px;">Пароль</label>
+                        {{form.password1}}
+                    </div>
+                    <div class="mb-3" style="margin-bottom: 58px !important;">
+                        <label for="pswInput2" class="form-label"
+                               style="margin-left: 15px; font-size: 18px;">Повтор пароля</label>
+                        {{form.password2}}
+                    </div>
+                        <div class="form-check" style="margin-bottom: 36px;">
+                            <input class="form-check-input" type="radio" id="checkDefault"
+                                   style="margin-right: 17px; margin-top: 18px">
+                            <label class="form-check-label" for="checkDefault">
+                                Я согласен с правилами пользования <br> и политикой конфиденциальности
+                            </label>
+                        </div>
+                    <br>
+                    <div>
+                        <button type="submit"
+                                style="background-color: #A77BCA; border-radius: 24px; height: 48px; width: 422px; border: 0px"
+                                class="btn btn-success">Зарегистрироваться
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <h1>{{ form.errors }}</h1>
+        </form>
+    </div>
+
+</div>
+{% endblock %}

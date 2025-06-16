@@ -3,9 +3,12 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import TemplateView, DetailView, ListView
+from django.urls import reverse_lazy
+from django.views.generic import TemplateView, DetailView, ListView, CreateView
 from .models import *
 from .forms import *
+from django.contrib.auth import login
+
 
 class CustomLoginView(LoginView):
     template_name = 'users/login.html'
@@ -18,6 +21,18 @@ class CustomLoginView(LoginView):
         return reverse('users:home')
 
 
+class RegisterView(CreateView):
+    model = CustomUser
+    form_class = CustomUserCreationForm
+    template_name = 'users/register.html'
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        login(self.request, self.object)
+        return response
+
+    def get_success_url(self):
+        return reverse_lazy('users:user_profile')
 
 
 class HomePageView(TemplateView):

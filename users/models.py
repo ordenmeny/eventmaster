@@ -4,7 +4,6 @@ from django.urls import reverse
 
 
 class CustomUser(AbstractUser):
-    age = models.IntegerField(null=True, blank=True)
     image = models.ImageField(upload_to='users_images/', null=True, blank=True)
     events = models.ManyToManyField('EventModel', blank=True)
 
@@ -37,6 +36,7 @@ class CollectionsModel(models.Model):
 
     def get_absolute_url(self):
         return reverse('users:collection_detail', kwargs={'pk': self.pk})
+
 
 class CategoryModel(models.Model):
     name = models.CharField(max_length=512)
