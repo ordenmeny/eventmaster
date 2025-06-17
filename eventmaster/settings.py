@@ -6,7 +6,7 @@ SECRET_KEY = 'django-insecure-^b9dxigc1+an7se!#%^uw5=o)dmk7%ye8kpgbhpmkup2_oaxpc
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eventmaster.pythonanywhere.com']
 
 
 INSTALLED_APPS = [
