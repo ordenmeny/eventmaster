@@ -80,11 +80,17 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'Asia/Yekaterinburg'
 
-USE_I18N = True
+USE_I18N = True  # Включение интернационализации
+USE_L10N = True  # Включение локализации
+
+DATE_FORMAT = 'd E Y'  # 20 июля 2025
+DATETIME_FORMAT = 'd E Y H:i'  # 20 июля 2025 19:00
+SHORT_DATE_FORMAT = 'd.m.Y'  # 20.07.2025
+SHORT_DATETIME_FORMAT = 'd.m.Y H:i'  # 20.07.2025 19:00
 
 USE_TZ = True
 

@@ -25,6 +25,9 @@ class EventModel(models.Model):
     def get_absolute_url(self):
         return reverse('users:event_detail', kwargs={'pk': self.pk})
 
+    class Meta:
+        ordering = ['-date']
+
 
 class CollectionsModel(models.Model):
     name = models.CharField(max_length=512, null=True, blank=True)
