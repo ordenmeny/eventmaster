@@ -1,10 +1,10 @@
 <div class="container">
-        <p class="title-block">Скоро в Екатеринбурге</p>
+        <h1>Скоро в Екатеринбурге</h1>
 
 
         <div class="container">
             <div class="row justify-content-start">
-              <div class="col-lg-8 col-md-12">
+              <div class="col-lg-8 col-md-12 nongap">
                 <div class="row g-4">
 
                   {% for event in soon_events %}
@@ -15,9 +15,9 @@
                             <img src="{{ event.image.url }}" class="card-img-top card-img" alt="...">
                         </a>
                       <div class="card-body">
-                        <a href="{% url 'users:event_detail' event.pk %}"><h5 class="card-title">{{ event.name }}</h5></a>
-                        <a href="{% url 'users:event_detail' event.pk %}"><p class="card-text">{{ event.category }}</p></a>
-                        <a href="{% url 'users:event_detail' event.pk %}"><p class="card-text">{{ event.date }} {{ event.address }}</p></a>
+                        <a href="{% url 'users:event_detail' event.pk %}"><h3>{{ event.name }}</h3></a>
+                        <a href="{% url 'users:event_detail' event.pk %}"><p class="p_metadata">{{ event.category }}</p></a>
+                        <a href="{% url 'users:event_detail' event.pk %}"><p class="p_description">{{ event.date }} {{ event.address }}</p></a>
                       </div>
                     </div>
                   </div>

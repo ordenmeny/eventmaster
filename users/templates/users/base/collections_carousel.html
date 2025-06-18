@@ -1,5 +1,5 @@
 <div class="container">
-    <p class="podborki-title">Подборки</p>
+    <h1>Подборки</h1>
 
     <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
@@ -7,14 +7,14 @@
             {% if not forloop.first %}
             <div class="carousel-item">
                 <a href="{% url 'users:collection_detail' collection.pk %}">
-                    <img src="{{ collection.image.url }}" class="d-block w-100" alt="{{ collection.name }}">
+                    <img src="{{ collection.image.url }}" class="d-block w-100 carousel-img" alt="{{ collection.name }}">
                 </a>
             </div>
 
             {% else %}
             <div class="carousel-item active">
                 <a href="{% url 'users:collection_detail' collection.pk %}">
-                    <img src="{{ collection.image.url }}" class="d-block w-100" alt="{{ collection.name }}">
+                    <img src="{{ collection.image.url }}" class="d-block w-100 carousel-img" alt="{{ collection.name }}">
                 </a>
             </div>
             {% endif %}

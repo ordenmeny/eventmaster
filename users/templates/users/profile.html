@@ -42,9 +42,9 @@
                                 <img src="{{ event.image.url }}" class="card-img-top card-img" alt="...">
                             </a>
                             <div class="card-body">
-                                <a href="{{ event.get_absolute_url }}"><h5 class="card-title">{{ event.name }}</h5></a>
-                                <a href="{{ event.get_absolute_url }}"><p class="card-text">{{ event.category }}</p></a>
-                                <a href="{{ event.get_absolute_url }}"><p class="card-text">{{ event.date }} {{ event.address }}</p></a>
+                                <a href="{{ event.get_absolute_url }}"><h3>{{ event.name }}</h3></a>
+                                <a href="{{ event.get_absolute_url }}"><p class="p_metadata">{{ event.category }}</p></a>
+                                <a href="{{ event.get_absolute_url }}"><p class="p_description">{{ event.date }} {{event.address }}</p></a>
                             </div>
                         </div>
                     </div>

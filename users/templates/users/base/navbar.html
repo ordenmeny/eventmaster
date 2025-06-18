@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="#">Ваша афиша</a>
+          <img src="{% static 'users/assets/logo.png' %}" class="logo" alt="Ваша афиша">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -14,9 +14,6 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'users:list_cats' %}">Категории</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfOoQO0L7C_65yazX-34Kr4uBAyBbn8Ki8jGfEcn32YmtzrxQ/viewform">Создать мероприятие</a>
               </li>
             </ul>
             <ul class="navbar-nav me-auto mb-2 mb-md-0">

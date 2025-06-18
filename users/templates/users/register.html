@@ -12,8 +12,8 @@
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
 
-            <div style="display: flex; gap: 40px;">
-                <div style="flex: 1;">
+            <div style="display: flex-row; gap: 40px;">
+                <div>
                     <div class="mb-3" style="margin-bottom: 24px !important;">
                         <label class="form-label"
                                style="margin-left: 15px; font-size: 18px;">Имя</label>
@@ -42,14 +42,14 @@
                         {{form.username}}
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label" style="font-size: 18px; margin-left: 15px;">Вставьте
+                        <label for="formFile" class="form-label rounded" style="font-size: 18px; margin-left: 15px;">Вставьте
                             аватарку</label>
                         {{form.image}}
                     </div>
                 </div>
 
 
-                <div style="flex: 1">
+                <div>
                     <div class="mb-3" style="margin-bottom: 24px !important;">
                         <label for="pswInput" class="form-label"
                                style="margin-left: 15px; font-size: 18px;">Пароль</label>

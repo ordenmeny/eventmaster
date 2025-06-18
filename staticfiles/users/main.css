@@ -1,6 +1,93 @@
+@font-face {
+    font-family: 'NT Somic';
+    src: url('./fonts/NTSomic-Regular.otf') format('opentype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: 400;
+    text-rendering: optimizeLegibility
+}
+
+@font-face {
+    font-family: 'NT Somic';
+    src: url('./fonts/NTSomic-Medium.otf') format('opentype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: 500;
+    text-rendering: optimizeLegibility
+}
+
+
+@font-face {
+    font-family: 'NT Somic';
+    src: url('./fonts/NTSomic-Bold.otf') format('opentype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: 700;
+    text-rendering: optimizeLegibility
+}
+
+@font-face {
+    font-family: 'NT Display';
+    src: url('./fonts/nt-logo-0.4.otf') format('opentype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: 700;
+    text-rendering: optimizeLegibility
+}
+
+body{
+    font-family: 'NT Somic', sans-serif;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-family: 'NT Display', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #101820;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'NT Somic', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #101820;
+}
+
+h3 {
+    font-family: 'NT Somic', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #101820;
+}
+
+
+
+
+p {
+    font-family: 'NT Somic', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #101820;
+}
+
+.p_metadata {
+    font-family: 'NT Somic', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #7e8fa0;
+
+}
+
+.p_description {
+    font-family: 'NT Somic', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #101820;
+
+}
+
 a{
     text-decoration: none;
-    color: black;
+    color: #101820;
 }
 
 .podborki-title{
@@ -11,36 +98,102 @@ a{
     font-size: 42px;
 }
 
+.nongap {
+    margin: 0 !important;
+    padding: 0 !important;
+    justify-content: space-between;
+}
+
+.withgap {
+    margin: 0 !important;
+    margin-right: auto !important;
+    padding: 0 !important;
+}
+
 .carousel-item img {
+    border-radius: 24px;
     height: 500px;
     object-fit: cover;
     object-position: center;
   }
 
+.card{
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.card-body {
+    margin: 0;
+    padding: 0;
+    margin-top: 12px;
+
+}
+
 .card-img{
     height: 240px;
     object-fit: cover;
     object-position: center;
+    border-radius: 24px;
 }
 
 .card-big-in-col{
     height: 304px;
     object-fit: cover;
     object-position: center;
+    border-radius: 24px;
 }
 
 .card-border-none{
+    border-radius: 24px;
     border: none !important;
 }
 
 .cat-image{
     width: 133px;
     height: 133px;
+    border-radius: 24px;
     /* margin: 200px !important; */
 }
 
+.navbar{
+    background-color: #ffffff !important;
+}
+
+.nav-item{
+    border-radius: 24px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: #101820 1px solid;
+}
+
+.logo{
+    height: 48px;
+    margin-right: 12px;
+}
+
+.rounded{
+    border-radius: 24px !important;
+}
+
+.image-wrapper {
+    border-radius: 24px;
+}
+
+
 
 @media (max-width: 773px) {
+    h1 {font-size: 32px;}
+    h2 {font-size: 32px;}
+
+    .carousel-img {
+        max-height: 150px;
+    }
+
+
     .event-img{
         height: 493px;
         width: 100%;
