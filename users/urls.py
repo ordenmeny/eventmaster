@@ -15,4 +15,5 @@ urlpatterns = [
     path('registr_event/<int:pk>/', registr_event_view, name='registr_event'),
     path('login/', CustomLoginView.as_view(), name='login'),
     path('register/', RegisterView.as_view(), name='register'),
+    path('logout/', logout_view, name='logout'),
 ]

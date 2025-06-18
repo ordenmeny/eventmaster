@@ -8,6 +8,12 @@ from django.views.generic import TemplateView, DetailView, ListView, CreateView
 from .models import *
 from .forms import *
 from django.contrib.auth import login
+from django.contrib.auth import logout
+
+def logout_view(request):
+    logout(request)
+    return redirect('/')
+
 
 
 class CustomLoginView(LoginView):
