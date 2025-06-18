@@ -26,7 +26,7 @@ class EventModel(models.Model):
         return reverse('users:event_detail', kwargs={'pk': self.pk})
 
     class Meta:
-        ordering = ['-date']
+        ordering = ['date']
 
 
 class CollectionsModel(models.Model):
